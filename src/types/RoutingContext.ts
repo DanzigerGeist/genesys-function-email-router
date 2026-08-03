@@ -45,6 +45,14 @@ export type RoutingContext = {
   /** Canned response text staged by reply rules, in the order the rules ran. */
   replies: string[];
 
+  /**
+   * Whether a matched skipAutoReply rule asked to suppress the mailbox's default auto-reply.
+   *
+   * Set by a non-terminal skipAutoReply rule and carried to the response, where the calling flow
+   * clears its auto-reply variable. Mirrors a legacy `skipAutoReply` routing action.
+   */
+  skipAutoReply?: boolean | undefined;
+
   /** Audit trail, one entry per rule considered — including the ones that did not match. */
   executionLog?: ActionResult[] | undefined;
 

@@ -19,9 +19,11 @@ export type FunctionRequest = Readonly<{
   /**
    * Identifier of the message within the conversation to evaluate.
    *
-   * A conversation accumulates messages; rules match against this one, not the whole thread.
+   * A conversation accumulates messages; rules match against this one, not the whole thread. Optional
+   * for callers that cannot supply it (Architect email flows expose no message id): when omitted, the
+   * router resolves the conversation's most recent message.
    */
-  messageId: string;
+  messageId?: string;
 
   /**
    * Evaluates every rule without performing outbound side effects.

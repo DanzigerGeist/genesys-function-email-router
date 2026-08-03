@@ -6,6 +6,7 @@ import {
   handlePrioritySet,
   handleReply,
   handleRoute,
+  handleSkipAutoReply,
 } from "../actions/mod.ts";
 import { evaluateFilter } from "../filters/evaluate.ts";
 import type { ActionHandler } from "../types/ActionHandler.ts";
@@ -24,6 +25,7 @@ const HANDLERS: Readonly<Record<RuleAction, ActionHandler>> = {
   [RuleAction.PrioritySet]: handlePrioritySet,
   [RuleAction.Reply]: handleReply,
   [RuleAction.Route]: handleRoute,
+  [RuleAction.SkipAutoReply]: handleSkipAutoReply,
 };
 
 /**

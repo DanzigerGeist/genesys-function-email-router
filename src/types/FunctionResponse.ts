@@ -29,10 +29,26 @@ export type FunctionResponse = Readonly<{
   replies?: string[] | undefined;
 
   /**
+   * Whether a matched skipAutoReply rule asked to suppress the mailbox's default auto-reply.
+   *
+   * The calling flow binds this and, when true, clears its auto-reply variable — mirroring the
+   * legacy `skipAutoReply` routing action.
+   */
+  skipAutoReply?: boolean | undefined;
+
+  /**
    * Per-rule audit trail of the evaluation.
    *
    * A deployed function emits no logs, so this is the only account of why a rule did or did not
    * fire that reaches the outside world.
    */
   executionLog?: ActionResult[] | undefined;
+
+  /**
+   * The per-rule audit trail as a JSON string.
+   *
+   * Architect cannot bind an array of objects, so the flow binds this single string and writes it to
+   * participant data — the only observability a Genesys-hosted function has (there is no CloudWatch).
+   */
+  executionLogJson?: string | undefined;
 }>;

@@ -37,4 +37,9 @@ export enum RuleAction {
    * Decreases the priority level of the interaction.
    */
   PriorityDecrease = "priority_decrease",
+
+  /**
+   * Suppresses the mailbox's default auto-reply without routing. Not terminal: evaluation continues.
+   */
+  SkipAutoReply = "skipAutoReply",
 }

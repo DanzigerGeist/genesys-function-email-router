@@ -16,3 +16,4 @@ export { handlePriorityIncrease } from "./handlePriorityIncrease.ts";
 export { handlePrioritySet } from "./handlePrioritySet.ts";
 export { handleReply } from "./handleReply.ts";
 export { handleRoute } from "./handleRoute.ts";
+export { handleSkipAutoReply } from "./handleSkipAutoReply.ts";

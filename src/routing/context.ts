@@ -39,7 +39,21 @@ export async function getContext(
   const conversationApi = new platformClient.ConversationsApi(client);
 
   const conversation = await conversationApi.getConversationsEmail(request.conversationId);
-  const message = await conversationApi.getConversationsEmailMessage(request.conversationId, request.messageId);
+
+  // POC fork: Architect inbound email flows expose Email.ConversationID but no message id. When the
+  // caller omits messageId, resolve the conversation's most recent message so the flow needs to pass
+  // only the conversation id. Costs one extra list call; the variant-A optimisation removes both
+  // conversation fetches by passing the message fields in from the flow directly.
+  let messageId = request.messageId;
+  if (!messageId) {
+    const messages = await conversationApi.getConversationsEmailMessages(request.conversationId);
+    const entities = messages.entities ?? [];
+    messageId = entities[entities.length - 1]?.id;
+    if (!messageId) {
+      throw new Error("No email message found on the conversation.");
+    }
+  }
+  const message = await conversationApi.getConversationsEmailMessage(request.conversationId, messageId);
 
   return {
     conversationApi,

@@ -44,6 +44,10 @@ export const handler: FunctionHandler = async (
     skill: routing.skill,
     priority: routing.priority,
     replies: routing.replies,
+    skipAutoReply: routing.skipAutoReply,
     executionLog: routing.executionLog,
+    // POC observability: a JSON string of the per-rule audit trail, so the calling flow can bind it
+    // as a single output and write it to participant data — Genesys functions have no logs of their own.
+    executionLogJson: JSON.stringify(routing.executionLog ?? []),
   };
 };
