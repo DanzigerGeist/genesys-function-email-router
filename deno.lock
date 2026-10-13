@@ -18,7 +18,7 @@
     "jsr:@std/testing@^1.0.19": "1.0.19",
     "jsr:@std/text@^1.0.19": "1.0.19",
     "npm:@types/aws-lambda@^8.10.162": "8.10.162",
-    "npm:purecloud-platform-client-v2@257": "257.0.0"
+    "npm:purecloud-platform-client-v2@264": "264.0.0"
   },
   "jsr": {
     "@cliffy/ansi@1.2.1": {
@@ -103,8 +103,8 @@
     "@colors/colors@1.6.0": {
       "integrity": "sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA=="
     },
-    "@dabh/diagnostics@2.0.8": {
-      "integrity": "sha512-R4MSXTVnuMzGD7bzHdW2ZhhdPC/igELENcq5IjEverBvq5hn1SXCWcsi6eSsdWP0/Ur+SItRRjAktmdoX/8R/Q==",
+    "@dabh/diagnostics@2.0.9": {
+      "integrity": "sha512-R6siwR65Hm+3yfgP7o8DKhNvputQAwfoz9zTc3kyDudnomj2/BcLmD+uGQQPICjuFUp8ounPBU+jmKsocwVVAg==",
       "dependencies": [
         "@so-ric/colorspace",
         "enabled",
@@ -136,8 +136,8 @@
     "asynckit@0.4.0": {
       "integrity": "sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q=="
     },
-    "axios@1.18.1": {
-      "integrity": "sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==",
+    "axios@1.20.0": {
+      "integrity": "sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==",
       "dependencies": [
         "follow-redirects",
         "form-data",
@@ -233,8 +233,8 @@
     "fn.name@1.1.0": {
       "integrity": "sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw=="
     },
-    "follow-redirects@1.16.0": {
-      "integrity": "sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw=="
+    "follow-redirects@1.16.1": {
+      "integrity": "sha512-FNvFGzoMLWmE6Yj9spb/zjd7yiNCHiAW9/Tg9CXrQ8wuu32HtlJOwWO11OJafl5FfY3DxTdQ0vj42zU1kvv5jg=="
     },
     "form-data@4.0.6": {
       "integrity": "sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==",
@@ -350,8 +350,8 @@
     "proxy-from-env@2.1.0": {
       "integrity": "sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA=="
     },
-    "purecloud-platform-client-v2@257.0.0": {
-      "integrity": "sha512-XJ9A3RxL5V4loU65GjhOvKpRlBCFUR5bbqsrEC25lqt9VUrvDLu57mhb6pw9LQb6FV1l61CPn47jlnItaBnXPw==",
+    "purecloud-platform-client-v2@264.0.0": {
+      "integrity": "sha512-5f0LHebm9MLQti7ZbzIFTUpVtHb0wa5WAwXgwglS/y8CO+bbRs9ZOM5Bl8awMMjyn7La0swLNvra7HtsRkOpCQ==",
       "dependencies": [
         "axios",
         "configparser",
@@ -420,7 +420,7 @@
       "jsr:@std/assert@^1.0.19",
       "jsr:@std/testing@^1.0.19",
       "npm:@types/aws-lambda@^8.10.162",
-      "npm:purecloud-platform-client-v2@257"
+      "npm:purecloud-platform-client-v2@264"
     ]
   }
 }
